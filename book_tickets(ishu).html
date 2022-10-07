@@ -1,0 +1,398 @@
+<html>
+	<head>
+		<title>
+			View Available Flights
+		</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<style>
+
+			*{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+				background: linear-gradient(-120deg, #85b8d5, #f2a9db);
+				background-color: #ebd5dd;	
+				fill-opacity: initial;		
+			}
+			
+            .tit-le{
+                font-family: sans-serif;
+	            font-style: bold;
+	            font-size: 30pt;
+	            text-align: center;
+            }
+
+            .nav-links {
+	            list-style-type: none;
+	            margin: 0;
+	            padding-left: 200px;
+	            overflow: hidden;
+                background: linear-gradient(-135deg, #4f67e4, #a254a1);
+            }
+            
+			.li-Nav{
+	            display: inline;
+	            float: left;
+            }
+
+           .li-Nav a {
+                display: block;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 14px 36px;
+                text-decoration: none;
+            }
+
+            .li-Nav a:hover {
+                background-color: #E7E7F6;
+                color: #030337;
+            }
+
+
+			input {
+				color: #111213c2;
+    			border: 1.5px solid #032d37;
+    			border-radius: 4px;
+    			padding: 7px 30px;
+			}
+
+			input[type=submit] {
+				outline: none;
+				color: black;
+				border: none;
+				font-size: 18px;
+				font-weight: 500;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px gray;
+				letter-spacing: 1px;
+				background: linear-gradient(135deg, #71b7e6, #9b59b6);
+			}
+
+			.button input[type=submit]:hover{
+				background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+			}
+
+			.button{
+				text-align: center;	
+			}
+
+			input[type=date] {
+				border: 1.5px solid #030337;
+    			border-radius: 4px;
+    			padding: 5.5px 44.5px;
+			}
+
+			select {
+    			border: 1.5px solid #030337;
+    			border-radius: 4px;
+    			padding: 6.5px 75.5px;
+			}
+
+			.SAF{
+				max-width: 1175px;
+				margin: auto;
+				width: 80%;
+				position: relative;
+				background-image:url("bcgrnd1.jpg");
+				background-repeat: no-repeat;
+				background-size: 1155px;
+				background-position: center;
+				padding: 25px 30px;
+				border-radius: 5px;	
+			}
+			
+
+			.title{
+				text-align: center;
+				font-size: 25px;
+				font-weight: 500;
+				position: relative;
+			}
+
+			.title::before{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 3px;
+				width: 315px;
+				background: linear-gradient(135deg, #9fc7f1, #f0bae3);
+			}
+
+			.AF{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin: 20px 0 12px 0;
+			}
+
+			.input-box{
+				margin-bottom: 15px;
+				width: calc(100% / 2 - 20px);
+				color: #08000a;
+			}
+
+			.details{
+				font-weight: 500;
+				margin-bottom: 5px;
+			}
+
+			.input-box input{
+				height: 45px;
+				width: 100%;
+				outline: none;
+				border: 1px solid rgba(200, 179, 208, 0.767);
+				padding-left: 15px;
+				font-size: 16px;
+				border-color: 2px;
+				transition: all 0.3s ease;
+			}
+
+			.AF .input-box input:focus,
+			.AF .input-box input:valid{
+				border-color:#9b59b6;
+			}
+
+			select{
+				height: 45px;
+				width: 100%;
+				outline: none;
+				border: 1px solid #ccc;
+				padding-left: 15px;
+				font-size: 16px;
+				border-color: 2px;
+				transition: all 0.3s ease;
+			}
+
+			.AF .input-box select:focus,
+			.AF .input-box select:valid{
+
+				border-color:#9b59b6;
+			}
+
+			.container{
+                max-width: 1170px;
+                margin: auto;
+            }
+            
+			.row{
+                 display: flex;
+                 flex-wrap: wrap;
+                 height: 100;
+            }
+            
+			ul{
+                 list-style: none;
+            }
+
+
+			.footer{
+                width: 100%;
+                height: 340px;
+                background-color: #24262b;
+                padding: 70px 0;
+                margin-top: auto;
+            }
+
+            .footer-col{
+                width: 33%;
+                padding: 0 15x;
+            }
+
+           .footer-col h4{
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+
+            .footer-col h4::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color:#ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+	padding-top: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+
+/*responsive*/
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:574px)
+	{
+    .footer-col{
+        width: 100%;
+    }
+}
+
+		</style>
+
+
+
+		<link rel="stylesheet" type="text/css" href="/htmlAll/style.css"/>
+		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<img class="logo" src="PhoenixLogo.jpg"  width="100" alt="Logo"/> 
+		<span class="tit-le" style="color: #030337">
+			Phoenix Airline
+		</span>
+
+		<nav>
+            <ul class="nav-links">
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-home" aria-hidden="true"> </i> Home </a> </li>
+                <li class="li-Nav"> <a href="login_page.php"> <i class="fa fa-ticket" aria-hidden="true"> </i> Book Tickets </a> </li>
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-plane" aria-hidden="true"></i> About Us </a> </li>
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-phone" aria-hidden="true"></i> Contact Us </a> </li>
+                <li class="li-Nav"> <a href="login_page.php"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login </a> </li>
+            </ul>
+        </nav>
+
+	<div class="SAF">
+
+		<form action="view_flights_form_handler.php" method="post">
+			<div class="title"><b> FOR AVAILABLE FLIGHTS</b></div>
+			
+		<div class="AF">
+
+			<div class="input-box">
+				<span class="details">Enter the Origin</span>
+				<input list="origins" name="origin" placeholder="From" required>
+  						<datalist id="origins">
+  						  	<option value="bangalore">
+  						</datalist>
+	    	 </div>
+
+			 <div class="input-box">
+	     		<span class="details">Enter the Destination</span>
+				<input list="destinations" name="destination" placeholder="To" required>
+  						<datalist id="destinations">
+  						  	<option value="mumbai">
+  						  	<option value="mysore">
+  						  	<option value="mangalore">
+  						  	<option value="chennai">
+  						  	<option value="hyderabad">
+  						</datalist>
+	    	 </div>
+
+			 <div class="input-box">
+	     		<span class="details">Enter the Departure Date</span>
+				<input type="date" name="dep_date" >
+						
+	    	 </div>
+
+			 <div class="input-box">
+	     		<span class="details">Enter the No. of Passengers</span>
+				<input type="number" name="no_of_pass" placeholder="Eg. 5" required>
+	    	 </div>
+
+			 <div class="input-box">
+	     		<span class="details">Enter the Class</span>
+				<select name="class">
+  							<option value="economy">Economy</option>
+  							<option value="business">Business</option>
+  				</select>
+	    	 </div>
+
+			</div>
+		
+			<div class="button">
+				<input type="submit" value="Search for Available Flights" name="Search">
+	  		</div>
+			
+		</form>
+	</div>
+
+	
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4> About Us </h4>
+                    <ul>
+                        <li> <a href="#"> About Phoenix </a></li>
+                        <li> <a href="#"> Sri Lanka Tourism </a></li>
+                        <li> <a href="#"> Join with Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Terms & Conditions </h4>
+                    <ul>
+                        <li> <a href="#"> Online Booking Terms of Use </a> </li>
+                        <li> <a href="#"> Conditions of Carriage </a> </li>
+                        <li> <a href="#"> Notices for Travel Agents </a> </li>
+                        <li> <a href="#"> Permission Center </a> </li>
+                        <li> <a href="#"> Service Fees at Ticket Office </a> </li>
+                        <li> <a href="#"> Privacy Policy </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fab fa-facebook-f"> </i> </a>
+                        <a href="#"> <i class="fab fa-twitter"> </i> </a>
+                        <a href="#"> <i class="fab fa-instagram"> </i> </a>
+                        <a href="#"> <i class="fab fa-linkedin-in"> </i> </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+	</body>
+</html>

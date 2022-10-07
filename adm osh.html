@@ -1,0 +1,266 @@
+<html>
+	<head>
+		<title>
+			Admin dashboard
+		</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			a {
+				color: #030337;
+				text-decoration: none;
+				
+			}
+			
+			table,th,td .adminT{
+				width: 100%;
+				height: 300px;
+				background: linear-gradient(120deg, #2980b9, #8e44ad);
+				margin:auto;
+				text-align: center;
+				border-collapse: collapse;
+				table-layout: fixed;
+	
+			}
+			table,th,td:hover{
+				background: linear-gradient(120deg, #2980b9, #8e44ad);
+				color:black;
+			}
+						
+			body{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(-120deg, #85b8d5, #f2a9db);
+				height: 100vh;
+				
+
+				line-height: 1.5;
+				font-family: 'Poppins', sans-serif;
+				min-height: 100vh;
+				
+				flex-direction: column;
+			}
+			.titl-le{
+				font-family: sans-serif;
+				font-style: bold;
+				font-size: 30pt;
+				text-align: center;
+			}
+
+			.signup_link{
+				margin: 30px 0;
+				text-align: center;
+				font-size: 16px;
+				color: #666666;
+			}
+
+			.signup_link a{
+				color: #2691d9;
+				text-decoration: none;
+			}
+
+			.signup_link a:hover{
+				text-decoration: underline;
+			}
+
+			.nav-links {
+				list-style-type: none;
+				margin: 0;
+				padding-left: 400px;
+				overflow: hidden;
+				background: linear-gradient(-120deg, #2980b9, #8e44ad);
+			}
+			.li-Nav{
+				display: inline;
+				float: left;
+			}
+
+			.li-Nav a {
+				display: block;
+				color: rgb(255, 255, 255);
+				text-align: center;
+				padding: 14px 36px;
+				text-decoration: none;
+			}
+
+			.li-Nav a:hover {
+				background-color: #E7E7F6;
+				color: #000000;
+			}
+
+
+			.container{
+				max-width: 1170px;
+				margin: auto;
+			}
+			
+			.row{
+				display: flex;
+				flex-wrap: wrap;
+				height: 100;
+			}
+
+			ul{
+				list-style: none;
+			}
+			.footer{
+				width: 100%;
+				height: 340px;
+				background-color: #24262b;
+				padding: 70px 0;
+				margin-top: auto;
+			}
+			.footer-col{
+				width: 33%;
+				padding: 0 15x;
+				
+			}
+			.footer-col h4{
+				font-size: 18px;
+				color: #ffffff;
+				text-transform: capitalize;
+				margin-bottom: 35px;
+				font-weight: 500;
+				position: relative;
+			}
+			.footer-col h4::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+				background-color: #e91e63;
+				height: 2px;
+				box-sizing: border-box;
+				width: 50px;
+			}
+			.footer-col ul li:not(:last-child){
+				margin-bottom: 10px;
+			}
+			.footer-col ul li a{
+				font-size: 16px;
+				text-transform: capitalize;
+				color: #ffffff;
+				text-decoration: none;
+				font-weight: 300;
+				color: #bbbbbb;
+				display: block;
+				transition: all 0.3s ease;
+			}
+			.footer-col ul li a:hover{
+				color:#ffffff;
+				padding-left: 8px;
+			}
+			.footer-col .social-links a{
+				display: inline-block;
+				padding-top: 10px;
+				height: 40px;
+				width: 40px;
+				background-color: rgba(255,255,255,0.2);
+				margin: 0 10px 10px 0;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 50%;
+				color: #ffffff;
+				transition: all 0.5s ease;
+			}
+			.footer-col .social-links a:hover{
+				color: #24262b;
+				background-color: #ffffff;
+			}
+
+			
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="../htmlAll/style.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	</head>
+	<div class="im-logo">
+
+		<img src="PhoenixLogo.jpg" width="100" alt="Logo">
+
+		<span class="titl-le" style="color: #030337">
+			Phoenix Airline
+		</span>
+
+	</div>
+	<nav>
+		<ul class="nav-links">
+			<li class="li-Nav"><a href="admin_homepage.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+			<li class="li-Nav"><a href="admin_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
+			<li class="li-Nav"><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+		</ul>
+	</nav>
+	
+		<center><h2><font size="6" color="seagreen">Welcome Administrator</font></h2></center>
+                <img src="img air3.jpg" height="450px" width="100%">
+                <break>
+                <table class="adminT" border="2px solid #000">
+			
+			<tr>
+				<td class="admin_func"><a href="admin_view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> View List of Booked Tickets for a Flight</font></a>
+				</td>
+				<td class="admin_func"><a href="add_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Add Flight Schedule Details</font></a>
+				</td>
+				<td class="admin_func"><a href="delete_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Delete Flight Schedule Details</font></a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="admin_func"><a href="add_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Add Aircrafts Details</font></a>
+				</td>
+				<td class="admin_func"><a href="activate_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Activate Aircraft</font></a>
+				</td>
+				<td class="admin_func"><a href="deactivate_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Deactivate Aircraft</font></a>
+				</td>
+			</tr>	
+		</table>
+		<footer class="footer">
+
+			<div class="container">
+	
+				<div class="row">
+	
+					<div class="footer-col">
+						<h4> About Us </h4>
+						<ul>
+							<li> <a href="#"> About Phoenix </a></li>
+							<li> <a href="#"> Sri Lanka Tourism </a></li>
+							<li> <a href="#"> Join with Us</a></li>
+						</ul>
+					</div>
+	
+					<div class="footer-col">
+						<h4> Terms & Conditions </h4>
+						<ul>
+							<li> <a href="#"> Online Booking Terms of Use </a> </li>
+							<li> <a href="#"> Conditions of Carriage </a> </li>
+							<li> <a href="#"> Notices for Travel Agents </a> </li>
+							<li> <a href="#"> Permission Center </a> </li>
+							<li> <a href="#"> Service Fees at Ticket Office </a> </li>
+							<li> <a href="#"> Privacy Policy </a> </li>
+						</ul>
+					</div>
+	
+					<div class="footer-col">
+						<h4> Follow Us</h4>
+						<div class="social-links">
+							<a href="#"> <i class="fab fa-facebook-f"> </i> </a>
+							<a href="#"> <i class="fab fa-twitter"> </i> </a>
+							<a href="#"> <i class="fab fa-instagram"> </i> </a>
+							<a href="#"> <i class="fab fa-linkedin-in"> </i> </a>
+						</div>
+						
+					</div>
+	
+				</div>
+	
+			</div>
+	
+		</footer>
+	</body>
+</html>
