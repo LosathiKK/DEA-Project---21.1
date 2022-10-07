@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>
+			Admin dashboard
+		</title>
+		<style>
+			a {
+				color: #030337;
+				text-decoration: none;
+				
+			}
+			a:hover{
+				background: linear-gradient(135deg, #cce5ff00, #99ff997d);
+				color: #030337;
+				text-decoration: none;
+			}
+			table,th,td .adminT{
+				width: 100%;
+				height: 300px;
+				background: linear-gradient(-135deg, #CCE5FF, #99FF99);
+				margin:auto;
+				text-align: center;
+				border-collapse: collapse;
+				table-layout: fixed;
+	
+			}
+			table,th,td:hover{
+				background: linear-gradient(-135deg, #CCE5FF, #99FF99);
+				color:black;
+			}
+			
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="../htmlAll/style.css"/>
+		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+	
+		<center><h2><font size="6" color="seagreen">Welcome Administrator</font></h2></center>
+                <img src="img air3.jpg" height="450px" width="1400px">
+                <break>
+                <table class="adminT" border="2px solid #000">
+			
+			<tr>
+				<td class="admin_func"><a href="admin_view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> View List of Booked Tickets for a Flight</font></a>
+				</td>
+				<td class="admin_func"><a href="add_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Add Flight Schedule Details</font></a>
+				</td>
+				<td class="admin_func"><a href="delete_flight_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Delete Flight Schedule Details</font></a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="admin_func"><a href="add_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Add Aircrafts Details</font></a>
+				</td>
+				<td class="admin_func"><a href="activate_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Activate Aircraft</font></a>
+				</td>
+				<td class="admin_func"><a href="deactivate_jet_details.php"><i class="fa fa-plane" aria-hidden="true"></i><font size="4" color="darkgreen"> Deactivate Aircraft</font></a>
+				</td>
+			</tr>
+
+			
+			
+		</table>
+	</body>
+</html>
