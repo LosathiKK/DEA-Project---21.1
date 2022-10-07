@@ -11,6 +11,8 @@
 		<title>
 			Create New User Account
 		</title>
+            <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 		<style>
 			input[type=submit] {
 				height: 100%;
@@ -110,11 +112,13 @@
 				
 			}
 		</style>
+                <link rel="stylesheet" href="signin.css">
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 		<link rel="stylesheet" type="text/css" href="/htmlAll/style.css"/>
 		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<img class="logo" src="/images/PhoenixLogo.jpg"/> 
+		<img src="PhoenixLogo.jpg" width="100" alt="Logo"> 
 		<h1 id="title">
 		Phoenix Airline		</h1>
 		<div >
