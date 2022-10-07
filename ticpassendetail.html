@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>
+        Ticket Passenger Details
+    </title>
+
+    <link rel="stylesheet" href="ticpassendetail.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+
+        <div class="im-logo">
+
+            <img src="PhoenixLogo.jpg" width="100" alt="Logo">
+
+            <span style="color: #030337">
+                Phoenix Airline
+            </span>
+
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-home" aria-hidden="true"> </i> Home </a> </li>
+                <li class="li-Nav"> <a href="login_page.php"> <i class="fa fa-ticket" aria-hidden="true"> </i> Book Tickets </a> </li>
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-plane" aria-hidden="true"></i> About Us </a> </li>
+                <li class="li-Nav"> <a href="home_page.php"> <i class="fa fa-phone" aria-hidden="true"></i> Contact Us </a> </li>
+                <li class="li-Nav"> <a href="login_page.php"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login </a> </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <div class="empty"> </div>
+
+    <div class="APD">
+
+        <p>
+            <strong>
+                Passenger Details
+            </strong>
+        </p>
+
+        <table cellpadding="0">
+
+            <tr class="APD2">
+                <td class="input-box"> Passport ID </td>
+                <td class="input-box"> First Name </td>
+                <td class="input-box"> Last Name </td>
+                <td class="input-box"> Age </td>
+                <td class="input-box"> Gender </td>
+                <td class="input-box"> Inflight Meal </td>
+            </tr>
+
+            <tr>
+                <td class="input-box"> <input type=text name=passid[] required> </td>
+                <td class="input-box"> <input type=text name=fname[] required></td>
+			    <td class="input-box"> <input type=text name=lname[] required></td>
+				<td class="input-box"> <input type=number name=age[] required></td>
+				<td class="input-box">
+                    <select name=pass_gender[]>
+                        <option value=male> Male </option>
+                        <option value=female> Female </option>
+                        <option value=other> Other </option>
+                    </select>
+                </td>
+                <td class="input-box">
+                    <select name="meal[]" class="meal">
+                        <option value="yes"> YES </option>
+                        <option value="no"> NO </option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <input type="submit" value="SUBMIT">
+
+    </div>
+
+    <hr>
+
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4> About Us </h4>
+                    <ul>
+                        <li> <a href="#"> About Phoenix </a></li>
+                        <li> <a href="#"> Sri Lanka Tourism </a></li>
+                        <li> <a href="#"> Join with Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Terms & Conditions </h4>
+                    <ul>
+                        <li> <a href="#"> Online Booking Terms of Use </a> </li>
+                        <li> <a href="#"> Conditions of Carriage </a> </li>
+                        <li> <a href="#"> Notices for Travel Agents </a> </li>
+                        <li> <a href="#"> Permission Center </a> </li>
+                        <li> <a href="#"> Service Fees at Ticket Office </a> </li>
+                        <li> <a href="#"> Privacy Policy </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fab fa-facebook-f"> </i> </a>
+                        <a href="#"> <i class="fab fa-twitter"> </i> </a>
+                        <a href="#"> <i class="fab fa-instagram"> </i> </a>
+                        <a href="#"> <i class="fab fa-linkedin-in"> </i> </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>
